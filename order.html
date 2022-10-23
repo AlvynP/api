@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <!-- <div class="container-fluid"> -->
+            <a class="navbar-brand" href="#"><img src="img/logo1.png" width="120" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <!-- <a class="nav-link" href="#">Pizza</a>
+                    <a class="nav-link" href="#">Pasta</a>
+                    <a class="nav-link" href="#">Nasi</a>
+                    <a class="nav-link" href="#">Minuman</a> -->
+                    <!-- <a class="nav-link disabled">Disabled</a> -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Order Online!</h1>
+        <div class="alert my-alert alert-success d-none alert-dismissible fade show" role="alert">
+            <strong>Pesanan anda sudah terkirim!</strong>.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="row mt-3">
+            <form action="" name="alvyn-hut" method="POST">
+                <div class="mb-3">
+                    <label for="food" class="form-label">FOOD</label>
+                    <select class="form-select" aria-label="food" name="food">
+              <option selected disabled required="required">choose food</option>
+              <option value="Meat Lover">Meat Lover</option>
+              <option value="Super Supreme">Super Supreme</option>
+              <option value="Tuna Melt">Tuna Melt</option>
+              <option value="American Favourite">American Favourite</option>
+              <option value="Beef Spaghetti">Beef Spaghetti</option>
+              <option value="Beef Lasagna">Beef Lasagna</option>
+              <option value="Creamy Beef Fettuccine">Creamy Beef Fettuccine</option>
+              <option value="Meatballs Beef Mushroom">Meatballs Beef Mushroom</option>
+              <option value="Black Pepper Chicken">Black Pepper Chicken</option>
+              <option value="Oriental Chicken">Oriental Chicken</option>
+            </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="food" class="form-label">Drink</label>
+                    <select name="drink" class="form-select" id="">
+              <option selected disabled required="required">choose a drink</option>
+              <option value="Choco Mint">Choco Mint</option>
+              <option value="Toffee Coffee">Toffee Coffee</option>
+              <option value="Green Tea Shake">Green Tea Shake</option>
+              <option value="Strawberry Milkshake">Strawberry Milkshake</option>
+              <option value="Chocolate Milkshake">Chocolate Milkshake</option>
+            </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" required name="nama" autocomplete="off" placeholder="masukkan nama anda..." onkeyup="this.value = this.value.toUpperCase()" minlength="2" />
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <input type="text" class="form-control" id="alamat" required name="alamat" autocomplete="off" placeholder="masukkan alamat..." onkeyup="this.value = this.value.toUpperCase()" />
+                </div>
+                <div class="mb-3">
+                    <label for="hp">No. Handphone</label>
+                    <input type="tel" class="form-control" id="hp" required name="hp" onkeypress="return hanyaAngka(event)" pattern="(\+62|62|0)8[1-9][0-9]{6,13}$" autocomplete="off" placeholder="masukkan no. hp..." />
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+            </form>
+        </div>
+    </div>
+
+    <!--  -->
+    <footer class="py-5 text-center">
+        <div class="">
+            <p class="">&copy;Dibuat oleh Alvyn Papalia</p>
+        </div>
+
+        <div class="">
+            <div class="">
+                <!-- Youtube -->
+                <a href="https://www.youtube.com/channel/UCPKZcIFBLxZYxiEopTHSZqQ" target="_blank" class="link">
+                    <!--  -->
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>YouTube</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/alvynpapaliat/" target="_blank" class="link">
+                    <!--  -->
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Instagram</title>
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+            </svg>
+                </a>
+                <!-- Twitter -->
+                <a href="#" target="_blank" class="link">
+                    <!--  -->
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Twitter</title>
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+                </a>
+                <!-- Tik-tok -->
+                <a href="#" target="_blank" class="link">
+                    <!--  -->
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>TikTok</title>
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+                </a>
+                <!-- Email -->
+                <a href="#" target="_blank" class="link">
+                    <!--  -->
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Facebook</title>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script>
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbxSkxVPLW9QHXdA0YAhw8Kj4uf89kpZ2fa06MCVJyYMyRAalb29ofvazu7wchzXI8SW/exec";
+        const form = document.forms["alvyn-hut"];
+
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+        const myAlert = document.querySelector(".my-alert");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // ketika tombol submit di klik
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            fetch(scriptURL, {
+                    method: "POST",
+                    body: new FormData(form),
+                })
+                .then((response) => {
+                    btnLoading.classList.toggle("d-none");
+                    btnKirim.classList.toggle("d-none");
+                    myAlert.classList.toggle("d-none");
+                    form.reset();
+                    console.log("Success!", response);
+                })
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
+
+    <script>
+        function hanyaAngka(evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+            return true;
+        }
+    </script>
+</body>
+
+</html>
